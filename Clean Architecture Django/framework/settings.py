@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))
 
-load_dotenv(BASE_DIR.parent / 'monolith' / '.env')
+load_dotenv(BASE_DIR.parent / 'Clean Architecture Django' / '.env')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-clean-arch-bb_1l#%3o23u($)lnaijkxmw&vm0vv!qkw%(iu1zwj9(8@y)-t'
@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'framework.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'book_store'),
+        'NAME': os.getenv('DB_NAME', 'book_store1'),
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', 'localhost'),

@@ -56,12 +56,12 @@ WSGI_APPLICATION = 'frontend_service.wsgi.application'
 # We'll use SQLite for sessions/messages to keep it simple.
 # Load environment variables from monolith .env
 from dotenv import load_dotenv
-load_dotenv(BASE_DIR.parent.parent / 'monolith' / '.env')
+load_dotenv(BASE_DIR.parent.parent / 'Microservices Django' / '.env')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'book_store'),
+        'NAME': os.getenv('DB_NAME', 'book_store2'),
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', 'localhost'),
