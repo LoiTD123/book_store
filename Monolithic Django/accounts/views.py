@@ -37,4 +37,10 @@ def login(request):
             messages.error(request, 'Email hoặc mật khẩu không đúng!')
             return render(request, 'accounts/login.html')
     
+    
     return render(request, 'accounts/login.html')
+
+def logout(request):
+    request.session.flush()
+    messages.success(request, 'Đã đăng xuất thành công!')
+    return redirect('/')

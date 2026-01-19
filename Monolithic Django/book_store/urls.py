@@ -19,7 +19,7 @@ from django.urls import path
 from django.shortcuts import render
 from django.conf import settings
 from django.conf.urls.static import static
-from accounts.views import register, login
+from accounts.views import register, login, logout
 from books.views import book_list
 from cart.views import add_to_cart, view_cart, remove_from_cart
 
@@ -31,6 +31,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('register/', register, name='register'),
     path('login/', login, name='login'),
+    path('logout/', logout, name='logout'),
     path('books/', book_list, name='book_list'),
     path('cart/', view_cart, name='view_cart'),
     path('cart/add/', add_to_cart, name='add_to_cart'),
